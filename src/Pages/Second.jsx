@@ -1,7 +1,14 @@
+import { useNavigate } from "react-router-dom";
 import { Footer } from "../Components/Footer";
 import { Header } from "../Components/Header";
 
 export const Second = () => {
+
+
+  const navigate = useNavigate();
+  const thirdpage = ()=>{
+    navigate("/third")
+  }  
     return (
         <div className="">
             <Header />
@@ -54,7 +61,7 @@ export const Second = () => {
                         <p className="text-md font-medium mb-2 text-gray-400">Guide your next move</p>
                         {/* <p className="text-md font-medium mb-2 text-gray-400">choosing for inter</p> */}
                         </div>
-                        <button className="bg-blue-500 text-white px-4 py-2 rounded-md mt-auto">
+                        <button className="bg-blue-500 text-white px-4 py-2 rounded-md mt-auto" onClick={thirdpage}>
                             Select
                         </button>
                     </div>

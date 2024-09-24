@@ -1,8 +1,15 @@
 import { Footer } from "../Components/Footer"
 import { Header } from "../Components/Header"
-
+import { useNavigate } from "react-router-dom";
 
 export const Home = () => {
+
+
+    const navigate = useNavigate()
+
+    const nextpage =()=>{
+        navigate("/second")
+    }
     return (    
         
         <div className="">
@@ -25,7 +32,7 @@ export const Home = () => {
                 helping you make informed decisions about your next steps</p>
          </div>
          <div className="ml-[100px] mt-[50px]">
-            <button type="button" class="text-white bg-orange-600 hover:bg-orange-500 focus:outline-none focus:ring-4 focus:ring-yellow-300 font-medium rounded-full text-sm px-5 py-2.5 text-center me-2 mb-2 dark:focus:ring-yellow-900">Get Started</button>
+            <button type="button" class="text-white bg-orange-600 hover:bg-orange-500 focus:outline-none focus:ring-4 focus:ring-yellow-300 font-medium rounded-full text-sm px-5 py-2.5 text-center me-2 mb-2 dark:focus:ring-yellow-900" onClick={nextpage}>Get Started</button>
             </div>
          </div> 
          <div className="w-[600px] h-[600px] mt-[250px] ml-[150px]  rounded-lg">
